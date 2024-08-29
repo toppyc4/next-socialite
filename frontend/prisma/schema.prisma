@@ -4,11 +4,45 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Users {
+  user_id    String   @id @unique @default(cuid())
+  username   String   @unique
+  firstname  String
+  lastname   String
+  email      String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+model Interests {
+  interest_id   String @id @unique @default(cuid())
+  interest_name String @unique
+  interest_type String
+}
+
+model JustArrivedInterests {
+  interest_id   String @id @unique @default(cuid())
+  interest_name String @unique
+  interest_type String
+}
+
+// model Users_Interests_Junction {
+//   user_id       Users  @relation(fields: [user_id], references: [id])
+//   interest_id   String @default(cuid())
+//   interest_type String
+// }
