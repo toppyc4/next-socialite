@@ -1,0 +1,20 @@
+# Use an official Node.js runtime as a base image
+FROM node:18-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+
+# Install all dependencies (including devDependencies)
+RUN npm install
+
+# Copy the remaining project files
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Start the Next.js app in development mode with hot-reloading
+CMD ["npm", "run", "dev"]
