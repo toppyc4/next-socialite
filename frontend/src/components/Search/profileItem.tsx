@@ -10,7 +10,7 @@ interface Profile {
 
 const ProfileItem: React.FC<{ profile: Profile }> = ({ profile }) => {
     return (
-        <Link href={`/profile/${profile.profileId}`} className="flex flex-col items-center">
+        <Link href={`/profile/${profile.profileId}`} className="flex flex-col items-center transition-opacity duration-300 hover:opacity-40">
             <Image src={profile.image} alt={profile.name} width={96}
             height={96} className = "rounded-full object-cover"/>
             <p className="mt-2 text-center text-sm font-medium text-gray-800 truncate w-20">{profile.name}</p>
