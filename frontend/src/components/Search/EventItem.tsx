@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 interface Event {
@@ -9,9 +8,9 @@ interface Event {
 
 const EventItem: React.FC<{ event: Event }> = ({ event }) => {
     return (
-        <Link href={`/event/${event.eventId}`} className="shadow-lg flex flex-col items-center relative overflow-hidden rounded-md transition-opacity duration-300 hover:opacity-40">
-            <div className = "relative w-28 h-44">
-                <Image src={event.image} alt={event.name} fill/>
+        <Link href={`/event/${event.eventId}`} className="h-64 shrink-0 w-32 shadow-lg flex flex-col items-center relative overflow-hidden rounded-md transition-opacity duration-300 hover:opacity-40">
+            <div className = "relative w-full h-full">
+                <Image src={event.image} alt={event.name} fill className='object-cover'/>
             </div>
             <p className="
             w-full

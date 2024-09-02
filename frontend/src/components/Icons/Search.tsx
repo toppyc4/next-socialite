@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {} 
 
-const Burger = React.forwardRef<SVGSVGElement, IconProps>(({ className, ...props }, ref) => ( 
+const Search = React.forwardRef<SVGSVGElement, IconProps>(({ className, ...props }, ref) => ( 
     <svg ref={ref} {...props} 
         className={className??''} 
         width="27" 
@@ -15,5 +15,5 @@ const Burger = React.forwardRef<SVGSVGElement, IconProps>(({ className, ...props
     </svg>
 ));
 
-Burger.displayName = 'Burger';
-export default Burger;
+Search.displayName = 'Burger';
+export default Search;

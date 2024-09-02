@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { redirect, useRouter, useSearchParams } from "next/navigation";
-import { useAuth } from "../../_providers/Auth";
+import { useAuth } from "../../../_providers/Auth";
 
 // import { Button } from "../../components/base/Button";
 
