@@ -3,18 +3,12 @@ import { useState, useMemo } from 'react'
 import EventItemFull from '@/components/Home/EventItemFull'
 import EventItem from '../../../components/Search/EventItem'
 import { EventFull } from '@/types/global'
-
-// const events = [
-//     {eventId: 1,
-// name: "Bob's Birthday",
-// image: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"},
-// {eventId: 2,
-// name: "Alice's Birthday",
-// image: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"},
-// {eventId: 3,
-// name: "Charlie's Birthday",
-// image: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"},
-// ]
+const allClasses = `
+    bg-red-500 
+    bg-blue-500 
+    bg-green-500 
+    bg-yellow-500 
+`;
 
 const events: EventFull[] = [
     {eventId: 1,
@@ -26,7 +20,10 @@ minAttendees: 10,
 maxAttendees: 20,
 minCost: 20,
 maxCost: 50,
-eventType: ["Birthday"]
+eventType: [
+    ["Conference", "red-500"],
+    ["Workshop", "blue-500"]
+]
 },
 {eventId: 2,
 name: "Alice's Birthday",
@@ -37,7 +34,10 @@ minAttendees: 10,
 maxAttendees: 20,
 minCost: 20,
 maxCost: 50,
-eventType: ["Birthday"]
+eventType: [
+    ["Conference", "red-500"],
+    ["Workshop", "blue-500"]
+]
 },
 {eventId: 3,
 name: "Charlie's Birthday",
@@ -48,7 +48,10 @@ minAttendees: 10,
 maxAttendees: 20,
 minCost: 20,
 maxCost: 50,
-eventType: ["Birthday"]
+eventType: [
+    ["Conference", "red-500"],
+    ["Workshop", "blue-500"]
+]
 },
 ]
 

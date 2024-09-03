@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 images: {
-    domains: ['img-cdn.pixlr.com'],
+    domains: ['img-cdn.pixlr.com', 'via.placeholder.com'],
   }
 };
 

@@ -1,10 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-interface Event {
-    eventId: number;
-    name: string;
-    image: string;
-}
+import { Event } from '@/types/global.ts'
 
 const EventItem: React.FC<{ event: Event }> = ({ event }) => {
     return (

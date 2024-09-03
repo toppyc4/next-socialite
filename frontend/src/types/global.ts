@@ -8,7 +8,24 @@ interface EventFull {
     maxAttendees:number|undefined;
     minCost:number;
     maxCost:number|undefined;
-    eventType:Array<string>;
+    eventType:Array<[String,String]>;
 }
-
-export type { EventFull }
+interface Event {
+    eventId: number;
+    name: string;
+    image: string;
+}
+interface User {
+    userId:number;
+    username:string;
+    userHandle:string;
+    lastOnline:Date;
+    profilePic:string;
+}
+interface Message {
+    messageId:number;
+    user:User;
+    text:string;
+    fromMe:boolean;
+}
+export type { EventFull, Event, User, Message }
